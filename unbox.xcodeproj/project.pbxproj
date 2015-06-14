@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		847118BD1B2CBC77006FFEB2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */; };
+		847118BF1B2CBD2D006FFEB2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */; };
+		847118C11B2CC2D6006FFEB2 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */; };
+		847118C31B2CC4F6006FFEB2 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C21B2CC4F6006FFEB2 /* DemoViewController.swift */; };
+		847118C51B2D07C3006FFEB2 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C41B2D07C3006FFEB2 /* BaseTransition.swift */; };
+		847118C81B2D0824006FFEB2 /* DetailedViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C71B2D0824006FFEB2 /* DetailedViewTransition.swift */; };
 		84CAB4671B2681EE00ABE15A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB4661B2681EE00ABE15A /* AppDelegate.swift */; };
 		84CAB4691B2681EE00ABE15A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB4681B2681EE00ABE15A /* ViewController.swift */; };
 		84CAB46C1B2681EE00ABE15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CAB46A1B2681EE00ABE15A /* Main.storyboard */; };
 		84CAB46E1B2681EE00ABE15A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CAB46D1B2681EE00ABE15A /* Images.xcassets */; };
 		84CAB4711B2681EE00ABE15A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CAB46F1B2681EE00ABE15A /* LaunchScreen.xib */; };
 		84CAB47D1B2681EE00ABE15A /* unboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB47C1B2681EE00ABE15A /* unboxTests.swift */; };
+		CB0096CB90483D27098DECCF /* libPods-unbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2C7AB7FFEA90BF21DBA12F /* libPods-unbox.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14FFC090A4C92ABA629A0B15 /* Pods-unbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unbox.release.xcconfig"; path = "Pods/Target Support Files/Pods-unbox/Pods-unbox.release.xcconfig"; sourceTree = "<group>"; };
+		33EC959C5D870E55D9A3DC66 /* Pods-unbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unbox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unbox/Pods-unbox.debug.xcconfig"; sourceTree = "<group>"; };
+		7C2C7AB7FFEA90BF21DBA12F /* libPods-unbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unbox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
+		847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
+		847118C21B2CC4F6006FFEB2 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		847118C41B2D07C3006FFEB2 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		847118C71B2D0824006FFEB2 /* DetailedViewTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewTransition.swift; sourceTree = "<group>"; };
+		84813D6B1B2D438A006EDC26 /* unbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unbox-Bridging-Header.h"; sourceTree = "<group>"; };
 		84CAB4611B2681EE00ABE15A /* unbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CAB4651B2681EE00ABE15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CAB4661B2681EE00ABE15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0096CB90483D27098DECCF /* libPods-unbox.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +74,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303FCE6397B0429A42718558 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33EC959C5D870E55D9A3DC66 /* Pods-unbox.debug.xcconfig */,
+				14FFC090A4C92ABA629A0B15 /* Pods-unbox.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		847118C61B2D07EC006FFEB2 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				847118C41B2D07C3006FFEB2 /* BaseTransition.swift */,
+				847118C71B2D0824006FFEB2 /* DetailedViewTransition.swift */,
+			);
+			name = Transitions;
+			sourceTree = "<group>";
+		};
 		84CAB4581B2681EE00ABE15A = {
 			isa = PBXGroup;
 			children = (
 				84CAB4631B2681EE00ABE15A /* unbox */,
 				84CAB4791B2681EE00ABE15A /* unboxTests */,
 				84CAB4621B2681EE00ABE15A /* Products */,
+				303FCE6397B0429A42718558 /* Pods */,
+				95F212A28BB952FD607AD1B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +115,18 @@
 		84CAB4631B2681EE00ABE15A /* unbox */ = {
 			isa = PBXGroup;
 			children = (
+				847118C61B2D07EC006FFEB2 /* Transitions */,
+				847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */,
 				84CAB4661B2681EE00ABE15A /* AppDelegate.swift */,
 				84CAB4681B2681EE00ABE15A /* ViewController.swift */,
 				84CAB46A1B2681EE00ABE15A /* Main.storyboard */,
+				847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */,
+				847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */,
 				84CAB46D1B2681EE00ABE15A /* Images.xcassets */,
 				84CAB46F1B2681EE00ABE15A /* LaunchScreen.xib */,
 				84CAB4641B2681EE00ABE15A /* Supporting Files */,
+				847118C21B2CC4F6006FFEB2 /* DemoViewController.swift */,
+				84813D6B1B2D438A006EDC26 /* unbox-Bridging-Header.h */,
 			);
 			path = unbox;
 			sourceTree = "<group>";
@@ -112,6 +156,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		95F212A28BB952FD607AD1B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C2C7AB7FFEA90BF21DBA12F /* libPods-unbox.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84CAB4801B2681EE00ABE15A /* Build configuration list for PBXNativeTarget "unbox" */;
 			buildPhases = (
+				0C0CCB30A927581D6EA650BE /* Check Pods Manifest.lock */,
 				84CAB45D1B2681EE00ABE15A /* Sources */,
 				84CAB45E1B2681EE00ABE15A /* Frameworks */,
 				84CAB45F1B2681EE00ABE15A /* Resources */,
+				D77EDD16A43B29C78D74659A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,12 +261,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C0CCB30A927581D6EA650BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D77EDD16A43B29C78D74659A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-unbox/Pods-unbox-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84CAB45D1B2681EE00ABE15A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847118BD1B2CBC77006FFEB2 /* PhotoCell.swift in Sources */,
+				847118C81B2D0824006FFEB2 /* DetailedViewTransition.swift in Sources */,
 				84CAB4691B2681EE00ABE15A /* ViewController.swift in Sources */,
+				847118C11B2CC2D6006FFEB2 /* DetailedViewController.swift in Sources */,
+				847118C51B2D07C3006FFEB2 /* BaseTransition.swift in Sources */,
+				847118C31B2CC4F6006FFEB2 /* DemoViewController.swift in Sources */,
+				847118BF1B2CBD2D006FFEB2 /* FeedViewController.swift in Sources */,
 				84CAB4671B2681EE00ABE15A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,21 +431,28 @@
 		};
 		84CAB4811B2681EE00ABE15A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC959C5D870E55D9A3DC66 /* Pods-unbox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = unbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "unbox/unbox-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		84CAB4821B2681EE00ABE15A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14FFC090A4C92ABA629A0B15 /* Pods-unbox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = unbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "unbox/unbox-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +509,7 @@
 				84CAB4821B2681EE00ABE15A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84CAB4831B2681EE00ABE15A /* Build configuration list for PBXNativeTarget "unboxTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +518,7 @@
 				84CAB4851B2681EE00ABE15A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
