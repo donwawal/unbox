@@ -65,18 +65,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var cell = sender as! PhotoCell
         var indexPath = tableView.indexPathForCell(cell)
         var detailsViewController = segue.destinationViewController as! DetailedViewController
-        
-        //refactor
-        //var photo = photos[indexPath!.row] as! NSDictionary
-        //var photoUrl = photo.valueForKeyPath("images.standard_resolution.url") as? String
-        
+                
         var photoUrl = photoUrls[indexPath!.row]
         detailsViewController.photoUrl = photoUrl
         detailsViewController.locationText = cell.locationLabel.text!
-        
-        //detailsViewController.photoView.setImageWithURL(NSURL(string: photoUrl))
-        
-        //detailsViewController.photoView.image = cell.photoView.image
         
         detailsViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
         detailsViewController.transitioningDelegate = DetailedViewTransition()

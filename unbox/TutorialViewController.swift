@@ -8,13 +8,17 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+class TutorialViewController: UIViewController, UIScrollViewDelegate {
+    
+    @IBOutlet weak var tutorialScrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        performSegueWithIdentifier("tutorialToPictureSegue", sender: nil)
+        tutorialScrollView.contentSize.width = 1280
+        tutorialScrollView.delegate = self
         
     }
 
@@ -23,6 +27,13 @@ class TutorialViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {// called when scroll view grinds to a halt
+        var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
+        pageControl.currentPage = page
+        
+        if page == 3 {            performSegueWithIdentifier("tutorialToPictureSegue", sender: nil)
+        }
+    }
 
     /*
     // MARK: - Navigation
