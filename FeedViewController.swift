@@ -68,11 +68,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //refactor
         //var photo = photos[indexPath!.row] as! NSDictionary
-
         //var photoUrl = photo.valueForKeyPath("images.standard_resolution.url") as? String
         
         var photoUrl = photoUrls[indexPath!.row]
         detailsViewController.photoUrl = photoUrl
+        detailsViewController.locationText = cell.locationLabel.text!
         
         //detailsViewController.photoView.setImageWithURL(NSURL(string: photoUrl))
         
