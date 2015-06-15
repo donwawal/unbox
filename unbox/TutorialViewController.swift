@@ -1,26 +1,21 @@
 //
-//  DetailedViewController.swift
+//  TutorialViewController.swift
 //  unbox
 //
-//  Created by Jules Walter on 6/13/15.
+//  Created by Jules Walter on 6/14/15.
 //  Copyright (c) 2015 Jules Walter. All rights reserved.
 //
 
 import UIKit
 
-class DetailedViewController: UIViewController {
-    @IBOutlet weak var photoView: UIImageView!
-    var photoUrl: String!
-    @IBOutlet weak var likesCountLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var likeButton: UIButton!
-    
+class TutorialViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        photoView.setImageWithURL(NSURL(string: photoUrl))
+        performSegueWithIdentifier("tutorialToPictureSegue", sender: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {

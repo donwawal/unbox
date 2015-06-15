@@ -10,9 +10,10 @@
 		847118BD1B2CBC77006FFEB2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */; };
 		847118BF1B2CBD2D006FFEB2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */; };
 		847118C11B2CC2D6006FFEB2 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */; };
-		847118C31B2CC4F6006FFEB2 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C21B2CC4F6006FFEB2 /* DemoViewController.swift */; };
 		847118C51B2D07C3006FFEB2 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C41B2D07C3006FFEB2 /* BaseTransition.swift */; };
 		847118C81B2D0824006FFEB2 /* DetailedViewTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C71B2D0824006FFEB2 /* DetailedViewTransition.swift */; };
+		8491029D1B2E117100EA692E /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491029C1B2E117100EA692E /* TutorialViewController.swift */; };
+		8491029F1B2E41DE00EA692E /* PhotoCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491029E1B2E41DE00EA692E /* PhotoCaptureViewController.swift */; };
 		84CAB4671B2681EE00ABE15A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB4661B2681EE00ABE15A /* AppDelegate.swift */; };
 		84CAB4691B2681EE00ABE15A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAB4681B2681EE00ABE15A /* ViewController.swift */; };
 		84CAB46C1B2681EE00ABE15A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CAB46A1B2681EE00ABE15A /* Main.storyboard */; };
@@ -39,10 +40,11 @@
 		847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 		847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
-		847118C21B2CC4F6006FFEB2 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 		847118C41B2D07C3006FFEB2 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		847118C71B2D0824006FFEB2 /* DetailedViewTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewTransition.swift; sourceTree = "<group>"; };
 		84813D6B1B2D438A006EDC26 /* unbox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "unbox-Bridging-Header.h"; sourceTree = "<group>"; };
+		8491029C1B2E117100EA692E /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		8491029E1B2E41DE00EA692E /* PhotoCaptureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCaptureViewController.swift; sourceTree = "<group>"; };
 		84CAB4611B2681EE00ABE15A /* unbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CAB4651B2681EE00ABE15A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84CAB4661B2681EE00ABE15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,12 +122,13 @@
 				84CAB4661B2681EE00ABE15A /* AppDelegate.swift */,
 				84CAB4681B2681EE00ABE15A /* ViewController.swift */,
 				84CAB46A1B2681EE00ABE15A /* Main.storyboard */,
+				8491029E1B2E41DE00EA692E /* PhotoCaptureViewController.swift */,
+				8491029C1B2E117100EA692E /* TutorialViewController.swift */,
 				847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */,
 				847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */,
 				84CAB46D1B2681EE00ABE15A /* Images.xcassets */,
 				84CAB46F1B2681EE00ABE15A /* LaunchScreen.xib */,
 				84CAB4641B2681EE00ABE15A /* Supporting Files */,
-				847118C21B2CC4F6006FFEB2 /* DemoViewController.swift */,
 				84813D6B1B2D438A006EDC26 /* unbox-Bridging-Header.h */,
 			);
 			path = unbox;
@@ -300,11 +303,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				847118BD1B2CBC77006FFEB2 /* PhotoCell.swift in Sources */,
+				8491029D1B2E117100EA692E /* TutorialViewController.swift in Sources */,
 				847118C81B2D0824006FFEB2 /* DetailedViewTransition.swift in Sources */,
 				84CAB4691B2681EE00ABE15A /* ViewController.swift in Sources */,
 				847118C11B2CC2D6006FFEB2 /* DetailedViewController.swift in Sources */,
 				847118C51B2D07C3006FFEB2 /* BaseTransition.swift in Sources */,
-				847118C31B2CC4F6006FFEB2 /* DemoViewController.swift in Sources */,
+				8491029F1B2E41DE00EA692E /* PhotoCaptureViewController.swift in Sources */,
 				847118BF1B2CBD2D006FFEB2 /* FeedViewController.swift in Sources */,
 				84CAB4671B2681EE00ABE15A /* AppDelegate.swift in Sources */,
 			);

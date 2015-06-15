@@ -11,9 +11,11 @@ import UIKit
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+
     var photos: NSArray! = []
     var photoUrls:[String] = []
     
+    var outputImageView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
