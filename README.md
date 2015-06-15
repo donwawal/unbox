@@ -1,24 +1,21 @@
 # unbox
 
 Tasks:
-* [ ] Wireframes (Court): http://kzr.me/301u1s010F3R
+* [ ] Wireframes (Court): https://www.dropbox.com/s/yjryoje4fe8a2m2/wireframes.pdf?dl=0
 * [ ] App Icon (Christine)
 * [ ] Launch screen (Christine)
 * [ ] Tutorial screens (Christine)
-* [ ] Optional: app store screens and copy (Christine)
 * [ ] Feed (Jules)
-    * [ ] Fit images into table cells
-    * [ ] Long press to view detailed view
-    * [ ] Pass info to detailed view
+    * [ ] Transition to detailed view
+    * [ ] Parse: list of images and location
 * [ ] Detailed View (Court)
-     * [ ] Swipe left
-     * [ ] Swipe right
-     * [ ] Like button
+     * [ ] Parse: large image, likes
+     * [ ] Like animation
      * [ ] Optional: Comments 
-     * [ ] Optional: Share button
 * [ ] Capture Photo (Jules)
-     * [ ] Upload photo
-     * [ ] Optional: Custom View
+     * [ ] Upload photo via Parse
+     * [ ] Add photo caption
+     * [ ] Optional: Custom View for camera
      * [ ] Optional: Select region to appear in feed
 
 User Stories:
