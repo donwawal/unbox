@@ -2,9 +2,12 @@
 
 Tasks:
 * [ ] Wireframes (Court): https://www.dropbox.com/s/yjryoje4fe8a2m2/wireframes.pdf?dl=0
-* [ ] App Icon (Christine)
-* [ ] Launch screen (Christine)
-* [ ] Tutorial screens (Christine)
+* [ ] Assets (Christine)
+    * [ ] App Icon
+    * [ ] Launch screen
+    * [ ] Tutorial screens
+    * [ ] Button images (like selected and unselected)
+    * [ ] Logo for navigation bar
 * [ ] Feed (Jules)
     * [ ] Transition to detailed view
     * [ ] Parse: list of images and location
