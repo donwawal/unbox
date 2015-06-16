@@ -10,20 +10,35 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     @IBOutlet weak var photoView: UIImageView!
-    var photoUrl: String!
+    @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var likesCountLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    var locationText = ""
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     
-    
+    var likes: Int!
+    var likeButtonCopy = UIImageView()
+    var locationText = ""
+    var photoUrl: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         photoView.setImageWithURL(NSURL(string: photoUrl))
         locationLabel.text = locationText
+        
+        if likes == nil {
+            likes = 0
+        }
+        likeCountLabel.text = String(likes)
+        
+        var imageName = "Like-25"
+        var photoViewCenter = CGPoint(x: 160, y: 207)
+        
+        likeButtonCopy.image = UIImage(named: imageName)
+        likeButtonCopy.center = photoViewCenter
+        photoView.addSubview(likeButtonCopy)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +59,30 @@ class DetailedViewController: UIViewController {
         }
     }
     
-
+    @IBAction func clickedLike(sender: UIButton) {
+        if likeButton.selected == true{
+            likes = likes - 1
+            updateLikeLabel()
+        } else {
+            likes = likes + 1
+            animatedLike()
+        }
+    }
+    
+    func animatedLike(){
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
+            //likeButton
+            
+        }) { (Bool) -> Void in
+            self.updateLikeLabel()
+        }
+    }
+    
+    func updateLikeLabel(){
+        likeButton.selected = !likeButton.selected
+        likeCountLabel.text = String(likes)
+    }
+    
     /*
     // MARK: - Navigation
 
