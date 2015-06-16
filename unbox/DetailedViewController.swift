@@ -38,6 +38,7 @@ class DetailedViewController: UIViewController {
         
         likeButtonCopy.image = UIImage(named: imageName)
         likeButtonCopy.center = photoViewCenter
+        likeButtonCopy.frame.size = likeButtonCopy.image!.size
         photoView.addSubview(likeButtonCopy)
     }
 
@@ -72,6 +73,7 @@ class DetailedViewController: UIViewController {
     func animatedLike(){
         UIView.animateWithDuration(0.3, animations: { () -> Void in
             //likeButton
+            self.likeButtonCopy.frame = self.likeButton.frame
             
         }) { (Bool) -> Void in
             self.updateLikeLabel()

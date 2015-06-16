@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="JAO-01-kBX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pbp-tc-zPt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -160,6 +160,16 @@
                                         <rect key="frame" x="960" y="0.0" width="320" height="568"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="npd-Wz-vJW">
+                                        <rect key="frame" x="1080" y="510" width="80" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Get Started">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="JAO-01-kBX" kind="modal" id="QYs-g5-Bd2"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" id="Er1-dk-xh4">
@@ -176,12 +186,11 @@
                     <connections>
                         <outlet property="pageControl" destination="Er1-dk-xh4" id="ael-Jp-P3k"/>
                         <outlet property="tutorialScrollView" destination="WFy-uu-FSa" id="X0J-5T-0L2"/>
-                        <segue destination="GWC-Ph-PeF" kind="modal" identifier="tutorialToPictureSegue" id="OYy-EJ-ci9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1e4-og-dmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1174" y="288"/>
+            <point key="canvasLocation" x="-634" y="288"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LPU-8y-1Dx">
@@ -247,12 +256,11 @@
                         <outlet property="descriptionTextView" destination="Re3-dJ-3CZ" id="2Sr-3Z-Cwa"/>
                         <outlet property="outputImageView" destination="HQj-q7-wJb" id="Y1M-xA-Ov4"/>
                         <outlet property="takePhotoButton" destination="Y3z-9H-wus" id="pes-e3-fAW"/>
-                        <segue destination="JAO-01-kBX" kind="modal" identifier="pictureToFeedSegue" id="N5N-Dc-m5c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFK-nF-lKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-176" y="288"/>
+            <point key="canvasLocation" x="662" y="979"/>
         </scene>
     </scenes>
     <resources>

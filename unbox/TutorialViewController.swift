@@ -31,7 +31,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         var page : Int = Int(round(tutorialScrollView.contentOffset.x / 320))
         pageControl.currentPage = page
         
-        if page == 3 {            performSegueWithIdentifier("tutorialToPictureSegue", sender: nil)
+        if page == 3 {
+            pageControl.alpha = 0 
         }
     }
 
