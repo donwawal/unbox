@@ -18,7 +18,8 @@ class DetailedViewTransition: BaseTransition {
     }
     
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
+        
         //TBD
     }
-   
+    
 }

@@ -11,15 +11,23 @@ import UIKit
 class DetailedViewController: UIViewController {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var likeCountLabel: UILabel!
-    @IBOutlet weak var likesCountLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var likeContainerView: UIView!
     
     var likes: Int!
-    var likeButtonCopy = UIImageView()
     var locationText = ""
     var photoUrl: String!
+    
+
+    // to animate on like
+    var likeButtonCopy = UIImageView()
+    var destination: CGPoint!
+    var initialFrame: CGRect!
+    var destinationFrame: CGRect!
+    var photoViewCenter: CGPoint!
+    
+    var window = UIApplication.sharedApplication().keyWindow
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,15 +39,21 @@ class DetailedViewController: UIViewController {
         if likes == nil {
             likes = 0
         }
-        likeCountLabel.text = String(likes)
         
+        likeCountLabel.text = String(likes)
         var imageName = "Like-25"
-        var photoViewCenter = CGPoint(x: 160, y: 207)
+
+        //Copy of like Button for animation
+        photoViewCenter = CGPoint(x: 160, y: 207)
         
         likeButtonCopy.image = UIImage(named: imageName)
         likeButtonCopy.center = photoViewCenter
         likeButtonCopy.frame.size = likeButtonCopy.image!.size
+        likeButtonCopy.alpha = 0
         photoView.addSubview(likeButtonCopy)
+        
+        destination = photoView.convertPoint(likeButton.center, fromView: likeContainerView)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,15 +82,21 @@ class DetailedViewController: UIViewController {
             likes = likes + 1
             animatedLike()
         }
+        
+        //TODO: update Parse
     }
     
     func animatedLike(){
-        UIView.animateWithDuration(0.3, animations: { () -> Void in
+        self.likeButtonCopy.alpha = 1
+        
+        UIView.animateWithDuration(1, animations: { () -> Void in
             //likeButton
-            self.likeButtonCopy.frame = self.likeButton.frame
+            self.likeButtonCopy.center = self.destination
             
         }) { (Bool) -> Void in
             self.updateLikeLabel()
+            self.likeButtonCopy.alpha = 0
+            self.likeButtonCopy.center = self.photoViewCenter
         }
     }
     

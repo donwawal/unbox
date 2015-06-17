@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        Parse.setApplicationId("jwmP3haSPlfXafHaL7YqylpvUIPensTpKj2sYL30", clientKey: "x39lbh7iGyZXP1Aw7hVIwYzMsoLWBQhepmvfBahH")
+        
+//        if PFUser.currentUser() != nil {
+//            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            var vc = storyboard.instantiateViewControllerWithIdentifier("Feed") as! UIViewController
+//            
+//            window?.rootViewController = vc
+//        }
+        
         return true
     }
 

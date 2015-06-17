@@ -11,21 +11,26 @@ import UIKit
 class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var outputImageView: UIImageView!
-    @IBOutlet weak var descriptionTextView: UITextView!
     
+    var alpha: CGFloat!
     var vc = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        self.view.alpha = alpha
+        
         vc.delegate = self
         vc.allowsEditing = true
         vc.sourceType = UIImagePickerControllerSourceType.Camera
-        // set my real view
-        //vc.cameraOverlayView = cameraView
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        if alpha == 0 {
+            self.presentViewController(vc, animated: true, completion: nil)}
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,30 +42,47 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
             var editedImage = info[UIImagePickerControllerEditedImage]as! UIImage
             
             outputImageView.image = originalImage
+            
+            alpha = 1
+            self.view.alpha = alpha
             picker.dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func didPressTakePhoto(sender: UIButton) {
-        
-                self.presentViewController(vc, animated: true, completion: nil)
+        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     
     @IBAction func didPressSubmitPhoto(sender: UIButton) {
-        //Write parse code here to replace code below
+        uploadPhoto(outputImageView.image!)
         dismissViewControllerAnimated(true, completion: nil)
-        performSegueWithIdentifier("pictureToFeedSegue", sender: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func didPressCancel(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
-    */
-
+    
+    func uploadPhoto(image: UIImage){
+        let imageData = UIImageJPEGRepresentation(image, 1.0)
+        let imageFile = PFFile(data: imageData)
+        
+        var post = PFObject(className: "Post")
+        post["imageFile"] = imageFile
+        
+        post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            if success {
+                println("post saved")
+                post["imageUrl"] = imageFile.url
+                post.saveInBackgroundWithBlock({ (Bool, error: NSError?) -> Void in
+                    if success {
+                        println("url saved")
+                    } else {
+                        println("url not saved")
+                    }
+                })
+            } else {
+                println("error \(error)")
+            }
+        }
+    }
 }
