@@ -63,7 +63,7 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func uploadPhoto(image: UIImage){
-        let imageData = UIImageJPEGRepresentation(image, 1.0)
+        let imageData = UIImageJPEGRepresentation(image, 5.0)
         let imageFile = PFFile(data: imageData)
         
         var post = PFObject(className: "Post")

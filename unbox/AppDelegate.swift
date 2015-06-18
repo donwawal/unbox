@@ -19,12 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.setApplicationId("jwmP3haSPlfXafHaL7YqylpvUIPensTpKj2sYL30", clientKey: "x39lbh7iGyZXP1Aw7hVIwYzMsoLWBQhepmvfBahH")
         
-//        if PFUser.currentUser() != nil {
-//            var storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            var vc = storyboard.instantiateViewControllerWithIdentifier("Feed") as! UIViewController
-//            
-//            window?.rootViewController = vc
-//        }
+        PFUser.enableAutomaticUser()
+        
+        let user = PFUser.currentUser()!
+        var value: AnyObject? = user["doneTutorial"]
+        if  value?.integerValue == 1 {
+            var storyboard = UIStoryboard(name: "Main", bundle: nil)
+            var vc = storyboard.instantiateViewControllerWithIdentifier("Feed") as! UIViewController
+            
+            window?.rootViewController = vc
+        }
         
         return true
     }

@@ -29,7 +29,13 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = page
         
         if page == 3 {
-            pageControl.alpha = 0 
+            pageControl.alpha = 0
+            let user = PFUser.currentUser()!
+            user["doneTutorial"] = 1
+            user.saveInBackgroundWithBlock({ (success: Bool, error: NSError?) -> Void in
+                println("tutorial done")
+            })
+            
         } else {
             pageControl.alpha = 1
         }

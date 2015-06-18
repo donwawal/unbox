@@ -7,7 +7,7 @@
         <!-- Context-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="Feed" id="vXZ-lx-hvc" customClass="FeedViewController" customModule="unbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Feed" id="vXZ-lx-hvc" customClass="FeedViewController" customModule="peek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -17,7 +17,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="80" id="RDW-rO-FsC" customClass="PhotoCell" customModule="unbox" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="80" id="RDW-rO-FsC" customClass="PhotoCell" customModule="peek" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDW-rO-FsC" id="svk-aP-Ptd">
@@ -72,7 +72,7 @@
         <!--Comment-->
         <scene sceneID="DQg-iW-1pm">
             <objects>
-                <viewController id="nnW-F9-dcY" customClass="DetailedViewController" customModule="unbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nnW-F9-dcY" customClass="DetailedViewController" customModule="peek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lFQ-Lk-loA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,9 +86,9 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hek-eW-hb9">
-                                        <rect key="frame" x="230" y="1" width="59" height="25"/>
+                                        <rect key="frame" x="209" y="0.0" width="60" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="Like-25">
+                                        <state key="normal" image="eye_like">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="Like Filled-25"/>
@@ -138,7 +138,7 @@
         <!--Tutorial View Controller-->
         <scene sceneID="SKM-v8-fn7">
             <objects>
-                <viewController id="pbp-tc-zPt" customClass="TutorialViewController" customModule="unbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pbp-tc-zPt" customClass="TutorialViewController" customModule="peek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="en9-Qk-QkT">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +216,7 @@
         <!--Photo Capture View Controller-->
         <scene sceneID="LHW-LT-qT0">
             <objects>
-                <viewController id="GWC-Ph-PeF" customClass="PhotoCaptureViewController" customModule="unbox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GWC-Ph-PeF" customClass="PhotoCaptureViewController" customModule="peek" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jri-Cl-coE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,7 +270,7 @@
     </scenes>
     <resources>
         <image name="Like Filled-25" width="25" height="25"/>
-        <image name="Like-25" width="25" height="25"/>
+        <image name="eye_like" width="60" height="34"/>
         <image name="welcome1" width="320" height="568"/>
         <image name="welcome2" width="320" height="568"/>
         <image name="welcome3" width="320" height="568"/>
