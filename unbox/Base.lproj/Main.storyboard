@@ -50,12 +50,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ven-1v-4Z2">
-                                <rect key="frame" x="0.0" y="530" width="320" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ven-1v-4Z2">
+                                <rect key="frame" x="0.0" y="511" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Take Photo">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="camera_icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -222,7 +222,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LPU-8y-1Dx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JAO-01-kBX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="JAO-01-kBX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0w-jY-rO1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -300,6 +300,7 @@
     </scenes>
     <resources>
         <image name="Like Filled-25" width="25" height="25"/>
+        <image name="camera_icon" width="120" height="120"/>
         <image name="eye_like" width="60" height="34"/>
         <image name="gradient fade" width="375" height="41"/>
         <image name="welcome1" width="320" height="568"/>

@@ -36,6 +36,13 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         // Dispose of any resources that can be recreated.
     }
     
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        alpha = 1
+        self.view.alpha = 0
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func imagePickerController(picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
             var originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -63,20 +70,26 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func uploadPhoto(image: UIImage){
-        let imageData = UIImageJPEGRepresentation(image, 5.0)
+        let imageData = UIImageJPEGRepresentation(image, 0.5)
         let imageFile = PFFile(data: imageData)
         
         var post = PFObject(className: "Post")
         
+        // photo location - not working yet
         PFGeoPoint.geoPointForCurrentLocationInBackground {
             (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
             if error == nil {
                 // do something with the new geoPoint
                 post["geoPoint"] = geoPoint
+                println("location saved")
+            }
+            else {
+                println("location error")
             }
         }
         
         post["imageFile"] = imageFile
+        post["user"] = PFUser.currentUser()
         
         post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {

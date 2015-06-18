@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var value: AnyObject? = user["doneTutorial"]
         if  value?.integerValue == 1 {
             var storyboard = UIStoryboard(name: "Main", bundle: nil)
-            var vc = storyboard.instantiateViewControllerWithIdentifier("Feed") as! UIViewController
+            var vc = storyboard.instantiateViewControllerWithIdentifier("NavigationController") as! UIViewController
             
             window?.rootViewController = vc
         }

@@ -38,6 +38,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell") as! PhotoCell
         
         var post = posts[indexPath.row] as PFObject
+//        var imageFile = post["imageFile"] as! PFFile
+//        var photoUrl = imageFile.url
         var photoUrl = post["imageUrl"] as? String
         photoUrls.append(photoUrl!)
         cell.photoView.setImageWithURL(NSURL(string: photoUrl!))
@@ -67,6 +69,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         
             detailsViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
             detailsViewController.transitioningDelegate = DetailedViewTransition()
+            
         }
         else if segue.identifier == "takePhotoSegue"{
             var photoCaptureController = segue.destinationViewController as! PhotoCaptureViewController
