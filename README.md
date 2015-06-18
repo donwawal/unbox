@@ -1,25 +1,25 @@
 # unbox
 
 Tasks:
-* [ ] Wireframes (Court): https://www.dropbox.com/s/yjryoje4fe8a2m2/wireframes.pdf?dl=0
+* [ ] Wireframes
 * [ ] Assets (Christine)
-    * [ ] App Icon
+    * [x] App Icon
     * [ ] Launch screen
     * [ ] Tutorial screens
     * [ ] Button images (like selected and unselected)
     * [ ] Logo for navigation bar
 * [ ] Feed (Jules)
     * [ ] Transition to detailed view
-    * [ ] Parse: list of images and location
+    * [ ] Parse: fast image download
+    * [ ] Reload data on drag
+    * [ ] Optional: Parse location
 * [ ] Detailed View (Court)
-     * [ ] Parse: large image, likes
+     * [ ] Parse: likes
      * [ ] Like animation
-     * [ ] Optional: Comments 
+     * [ ] Optional: Parse comments 
 * [ ] Capture Photo (Jules)
-     * [ ] Upload photo via Parse
-     * [ ] Add photo caption
-     * [ ] Optional: Custom View for camera
-     * [ ] Optional: Select region to appear in feed
+     * [ ] Upload resized photo to Parse
+     * [ ] Optional: upload location
 
 User Stories:
 * [ ] User takes and uploads a photo
