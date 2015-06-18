@@ -17,8 +17,6 @@ class PhotoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        photoView = UIImageView()
-        photoView.image = photo
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

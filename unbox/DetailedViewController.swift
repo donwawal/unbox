@@ -18,14 +18,16 @@ class DetailedViewController: UIViewController {
     var likes: Int!
     var locationText = ""
     var photoUrl: String!
+    var photo: UIImage!
     
-
     // to animate on like
     var likeButtonCopy = UIImageView()
     var destination: CGPoint!
     var initialFrame: CGRect!
     var destinationFrame: CGRect!
     var photoViewCenter: CGPoint!
+    
+    var photoUrls:[String] = []
     
     var window = UIApplication.sharedApplication().keyWindow
 
