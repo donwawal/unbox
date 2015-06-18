@@ -67,6 +67,15 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         let imageFile = PFFile(data: imageData)
         
         var post = PFObject(className: "Post")
+        
+        PFGeoPoint.geoPointForCurrentLocationInBackground {
+            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
+            if error == nil {
+                // do something with the new geoPoint
+                post["geoPoint"] = geoPoint
+            }
+        }
+        
         post["imageFile"] = imageFile
         
         post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in

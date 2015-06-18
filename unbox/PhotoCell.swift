@@ -12,10 +12,13 @@ class PhotoCell: UITableViewCell {
 
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var photoView: UIImageView!
+    var photo: UIImage!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        photoView = UIImageView()
+        photoView.image = photo
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
