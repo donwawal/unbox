@@ -11,14 +11,7 @@ import UIKit
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var photos: NSArray! = []
-    var photoUrls:[String] = []
     var posts:[PFObject] = []
-    
-    var images: NSArray! = []
-    var outputImageView = UIImageView()
-    var selectedImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,11 +31,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var cell = tableView.dequeueReusableCellWithIdentifier("PhotoCell") as! PhotoCell
         
         var post = posts[indexPath.row] as PFObject
-//        var imageFile = post["imageFile"] as! PFFile
-//        var photoUrl = imageFile.url
-        var photoUrl = post["imageUrl"] as? String
-        photoUrls.append(photoUrl!)
-        cell.photoView.setImageWithURL(NSURL(string: photoUrl!))
+        var photoUrl: String = post["imageFile"]!.url!!
+        cell.photoView.setImageWithURL(NSURL(string: photoUrl))
         
         return cell
     }
@@ -61,17 +51,17 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "detailedViewSegue"{
             var cell = sender as! PhotoCell
             var indexPath = tableView.indexPathForCell(cell)
-            println("indexpath.row:\(indexPath!.row)")
-            var detailsViewController = segue.destinationViewController as! DetailedViewController
             
-            //var photoUrl = photoUrls[indexPath!.row]
-            //detailsViewController.photoUrl = photoUrl
+            println("indexpath.row:\(indexPath!.row)")
+            
+            var detailsViewController = segue.destinationViewController as! DetailedViewController
             
             var post = posts[indexPath!.row]
             detailsViewController.post = post
-            let likes = post["likes"] as? Int
-
+            
             detailsViewController.photoUrl = post["imageFile"]!.url
+            
+            let likes = post["likes"] as? Int
             detailsViewController.likes = likes
             
             detailsViewController.modalPresentationStyle = UIModalPresentationStyle.Custom

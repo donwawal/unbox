@@ -83,14 +83,6 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
                 println("post saved")
-                post["imageUrl"] = imageFile.url
-                post.saveInBackgroundWithBlock({ (Bool, error: NSError?) -> Void in
-                    if success {
-                        println("url saved")
-                    } else {
-                        println("url not saved")
-                    }
-                })
             } else {
                 println("error \(error)")
             }
