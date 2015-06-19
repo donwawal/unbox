@@ -61,11 +61,19 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "detailedViewSegue"{
             var cell = sender as! PhotoCell
             var indexPath = tableView.indexPathForCell(cell)
+            println("indexpath.row:\(indexPath!.row)")
             var detailsViewController = segue.destinationViewController as! DetailedViewController
             
-            var photoUrl = photoUrls[indexPath!.row]
-            detailsViewController.photoUrl = photoUrl
-                        
+            //var photoUrl = photoUrls[indexPath!.row]
+            //detailsViewController.photoUrl = photoUrl
+            
+            var post = posts[indexPath!.row]
+            detailsViewController.post = post
+            let likes = post["likes"] as? Int
+
+            detailsViewController.photoUrl = post["imageFile"]!.url
+            detailsViewController.likes = likes
+            
             detailsViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
             detailsViewController.transitioningDelegate = DetailedViewTransition()
             

@@ -18,6 +18,8 @@ class DetailedViewController: UIViewController {
     var photoUrl: String!
     var photo: UIImage!
     
+    var post: PFObject!
+    
     // to animate on like
     var likeButtonCopy = UIImageView()
     var destination: CGPoint!
@@ -76,13 +78,31 @@ class DetailedViewController: UIViewController {
     @IBAction func clickedLike(sender: UIButton) {
         if likeButton.selected == true{
             likes = likes - 1
+            post.incrementKey("likes", byAmount: -1)
+            post.saveInBackgroundWithBlock { (Bool, error: NSError?) -> Void in
+                if error == nil {
+                    println("like decreased")
+                }
+            }
             updateLikeLabel()
         } else {
             likes = likes + 1
+            post.incrementKey("likes", byAmount: 1)
+            post.saveInBackgroundWithBlock { (Bool, error: NSError?) -> Void in
+                if error == nil {
+                    println("like increased")
+                }
+            }
             animatedLike()
         }
         
         //TODO: update Parse
+
+        post.saveInBackgroundWithBlock { (Bool, error: NSError?) -> Void in
+            if error == nil {
+                println("like changed")
+            }
+        }
     }
     
     func animatedLike(){
