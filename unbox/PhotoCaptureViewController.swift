@@ -70,23 +70,12 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
     }
     
     func uploadPhoto(image: UIImage){
-        let imageData = UIImageJPEGRepresentation(image, 0.5)
+        var resizedImage = RBResizeImage(image, targetSize: CGSize(width: 320,height: 420))
+        
+        let imageData = UIImageJPEGRepresentation(resizedImage, 1.0)
         let imageFile = PFFile(data: imageData)
         
         var post = PFObject(className: "Post")
-        
-        // photo location - not working yet
-        PFGeoPoint.geoPointForCurrentLocationInBackground {
-            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
-            if error == nil {
-                // do something with the new geoPoint
-                post["geoPoint"] = geoPoint
-                println("location saved")
-            }
-            else {
-                println("location error")
-            }
-        }
         
         post["imageFile"] = imageFile
         post["user"] = PFUser.currentUser()
@@ -106,5 +95,33 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
                 println("error \(error)")
             }
         }
+    }
+    
+    func RBResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        //from hcatlin / RBResizer.swift
+        
+        let size = image.size
+        
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            newSize = CGSizeMake(size.width * heightRatio, size.height * heightRatio)
+        } else {
+            newSize = CGSizeMake(size.width * widthRatio,  size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRectMake(0, 0, newSize.width, newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.drawInRect(rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
     }
 }

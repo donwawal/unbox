@@ -65,7 +65,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             var photoUrl = photoUrls[indexPath!.row]
             detailsViewController.photoUrl = photoUrl
-            detailsViewController.locationText = cell.locationLabel.text!
                         
             detailsViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
             detailsViewController.transitioningDelegate = DetailedViewTransition()

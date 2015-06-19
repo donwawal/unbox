@@ -11,12 +11,10 @@ import UIKit
 class DetailedViewController: UIViewController {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var likeCountLabel: UILabel!
-    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeContainerView: UIView!
     
     var likes: Int!
-    var locationText = ""
     var photoUrl: String!
     var photo: UIImage!
     
@@ -36,7 +34,6 @@ class DetailedViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         photoView.setImageWithURL(NSURL(string: photoUrl))
-        locationLabel.text = locationText
         
         if likes == nil {
             likes = 0
