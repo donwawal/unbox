@@ -8,12 +8,12 @@ Tasks:
     * [ ] Button images (camera, like, done, back)
     * [ ] Logo for navigation bar
 * [ ] Feed (Jules)   
-    * [ ] TableView: consistent download and enable scroll to last image
+    * [ ] TableView: consistent download 
+    * [ ] Scroll to last image
     * [ ] Reload data on drag
-* [ ] Detailed View
+* [ ] Detailed View (Jules)
      * [ ] Like: max 1 per user
      * [ ] Like animation
-     * [ ] Parse comments 
 * [ ] Capture Photo (Jules)
      * [ ] Upload photo from camera roll
      * [ ] Optional: upload location
