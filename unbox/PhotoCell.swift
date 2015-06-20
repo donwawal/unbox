@@ -13,6 +13,7 @@ class PhotoCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var photoView: UIImageView!
     var photo: UIImage!
+    @IBOutlet weak var cellContainerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

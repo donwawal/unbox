@@ -12,6 +12,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     var posts:[PFObject] = []
+    var selectedCell: PhotoCell!
+    var transition: DetailedViewTransition!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,21 +53,23 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "detailedViewSegue"{
             var cell = sender as! PhotoCell
             var indexPath = tableView.indexPathForCell(cell)
+            selectedCell = cell
             
-            println("indexpath.row:\(indexPath!.row)")
-            
-            var detailsViewController = segue.destinationViewController as! DetailedViewController
+            var detailedViewController = segue.destinationViewController as! DetailedViewController
             
             var post = posts[indexPath!.row]
-            detailsViewController.post = post
+            detailedViewController.post = post
             
-            detailsViewController.photoUrl = post["imageFile"]!.url
+            detailedViewController.photoUrl = post["imageFile"]!.url
             
             let likes = post["likes"] as? Int
-            detailsViewController.likes = likes
+            detailedViewController.likes = likes
             
-            detailsViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
-            detailsViewController.transitioningDelegate = DetailedViewTransition()
+            detailedViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+            transition = DetailedViewTransition()
+            transition.feedViewController = self
+            transition.detailedViewController = detailedViewController
+            detailedViewController.transitioningDelegate = transition
             
         }
         else if segue.identifier == "takePhotoSegue"{

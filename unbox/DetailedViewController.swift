@@ -42,7 +42,7 @@ class DetailedViewController: UIViewController {
         }
         
         likeCountLabel.text = String(likes)
-        var imageName = "Like-25"
+        var imageName = "eye_like"
 
         //Copy of like Button for animation
         photoViewCenter = CGPoint(x: 160, y: 207)
@@ -64,7 +64,7 @@ class DetailedViewController: UIViewController {
     
     
     @IBAction func sharePhoto(sender: UIBarButtonItem) {
-        let textToShare = "Here is a great photo from Unbox:"
+        let textToShare = "Here is a great photo from Peek:"
         
         if let url = NSURL(string: photoUrl)
         {
@@ -95,14 +95,6 @@ class DetailedViewController: UIViewController {
             }
             animatedLike()
         }
-        
-        //TODO: update Parse
-
-        post.saveInBackgroundWithBlock { (Bool, error: NSError?) -> Void in
-            if error == nil {
-                println("like changed")
-            }
-        }
     }
     
     func animatedLike(){
@@ -123,15 +115,4 @@ class DetailedViewController: UIViewController {
         likeButton.selected = !likeButton.selected
         likeCountLabel.text = String(likes)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

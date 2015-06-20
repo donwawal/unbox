@@ -36,6 +36,7 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
+                                            <outlet property="cellContainerView" destination="svk-aP-Ptd" id="IbN-da-eIb"/>
                                             <outlet property="photoView" destination="FE9-8E-biI" id="fSo-fG-A7P"/>
                                         </connections>
                                     </tableViewCell>
@@ -60,7 +61,7 @@
                     <navigationItem key="navigationItem" title="Photo Feed" id="iUH-Pz-2tU"/>
                     <connections>
                         <outlet property="tableView" destination="0IU-rb-FQx" id="ilg-C2-UwS"/>
-                        <segue destination="nnW-F9-dcY" kind="push" identifier="detailedViewSegue" id="Msb-cv-CV4"/>
+                        <segue destination="nnW-F9-dcY" kind="modal" identifier="detailedViewSegue" id="Msb-cv-CV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -85,7 +86,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="gradient fade" id="qde-t1-WnK">
-                                        <rect key="frame" x="-28" y="-27" width="375" height="89"/>
+                                        <rect key="frame" x="0.0" y="-15" width="375" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <animations/>
                                     </imageView>
@@ -93,10 +94,10 @@
                                         <rect key="frame" x="232" y="1" width="38" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <animations/>
-                                        <state key="normal" image="eye_like">
+                                        <state key="normal" image="eye_no_like 2">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" image="Like Filled-25"/>
+                                        <state key="selected" image="eye_like"/>
                                         <connections>
                                             <action selector="clickedLike:" destination="nnW-F9-dcY" eventType="touchUpInside" id="mLY-u9-cTt"/>
                                         </connections>
@@ -283,9 +284,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Like Filled-25" width="25" height="25"/>
         <image name="camera_icon" width="120" height="120"/>
         <image name="eye_like" width="60" height="34"/>
+        <image name="eye_no_like 2" width="60" height="34"/>
         <image name="gradient fade" width="375" height="41"/>
         <image name="welcome1" width="320" height="568"/>
         <image name="welcome2" width="320" height="568"/>
