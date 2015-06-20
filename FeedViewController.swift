@@ -34,6 +34,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         var post = posts[indexPath.row] as PFObject
         var photoUrl: String = post["imageFile"]!.url!!
+        cell.photoView.image = nil
         cell.photoView.setImageWithURL(NSURL(string: photoUrl))
         
         return cell
@@ -80,6 +81,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func onTimer(){
         var query = PFQuery(className: "Post")
+        query.addDescendingOrder("createdAt")
         query.findObjectsInBackgroundWithBlock { (results: [AnyObject]?, error: NSError?) -> Void in
             self.posts = results as! [PFObject]
             self.tableView.reloadData()

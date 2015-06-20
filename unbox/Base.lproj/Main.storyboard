@@ -279,7 +279,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LPU-8y-1Dx">
             <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="JAO-01-kBX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="JAO-01-kBX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0w-jY-rO1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
