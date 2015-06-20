@@ -8,17 +8,22 @@
 
 import UIKit
 
-class DetailedViewController: UIViewController {
+class DetailedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeContainerView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messageField: UITextField!
+    @IBOutlet weak var sendMessageView: UIView!
     
     var likes: Int!
     var photoUrl: String!
     var photo: UIImage!
     
     var post: PFObject!
+    
+    var messages: [PFObject] = []
     
     // to animate on like
     var likeButtonCopy = UIImageView()
@@ -54,7 +59,16 @@ class DetailedViewController: UIViewController {
         photoView.addSubview(likeButtonCopy)
         
         destination = photoView.convertPoint(likeButton.center, fromView: likeContainerView)
-
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "onTimer", userInfo: nil, repeats: true)
+        timer.fire()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -120,4 +134,92 @@ class DetailedViewController: UIViewController {
         likeButton.selected = !likeButton.selected
         likeCountLabel.text = String(likes)
     }
+    
+    //TableView Code
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier("MessageCell") as! MessageCell
+        
+        var message = messages[indexPath.row]
+        cell.messageLabel.text = message["text"] as? String
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    @IBAction func didPressSend(sender: UIButton) {
+        var message = PFObject(className: "Message")
+        message["text"] = messageField.text
+        message["user"] = PFUser.currentUser()
+        message["post"] = post
+        
+        message.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+            println("message saved")
+        }
+        self.view.endEditing(true)
+    }
+    
+    func onTimer(){
+        var query = PFQuery(className: "Message")
+        query.whereKey("post", equalTo: post)
+        
+        query.findObjectsInBackgroundWithBlock { (results:[AnyObject]?, error: NSError?) -> Void in
+            self.messages = results as! [PFObject]
+            self.tableView.reloadData()
+        }
+    }
+    
+    func keyboardWillShow(notification: NSNotification!) {
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
+            
+            // Set view properties in here that you want to match with the animation of the keyboard
+            // If you need it, you can use the kbSize property above to get the keyboard width and height.
+            
+            self.photoView.center.y -= kbSize.height
+            self.tableView.center.y -= kbSize.height
+            self.sendMessageView.center.y -= kbSize.height
+            
+            }, completion: nil)
+    }
+    
+    func keyboardWillHide(notification: NSNotification!) {
+        var userInfo = notification.userInfo!
+        
+        // Get the keyboard height and width from the notification
+        // Size varies depending on OS, language, orientation
+        var kbSize = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).CGRectValue().size
+        var durationValue = userInfo[UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
+        var animationDuration = durationValue.doubleValue
+        var curveValue = userInfo[UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
+        var animationCurve = curveValue.integerValue
+        
+        UIView.animateWithDuration(animationDuration, delay: 0.0, options: UIViewAnimationOptions(UInt(animationCurve << 16)), animations: {
+            
+            // Set view properties in here that you want to match with the animation of the keyboard
+            // If you need it, you can use the kbSize property above to get the keyboard width and height.
+            
+            self.photoView.center.y += kbSize.height
+            self.tableView.center.y += kbSize.height
+            self.sendMessageView.center.y += kbSize.height
+            
+            }, completion: nil)
+    }
+    
+    @IBAction func onTap(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841E39ED1B3525E500BC3808 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841E39EC1B3525E500BC3808 /* MessageCell.swift */; };
 		847118BD1B2CBC77006FFEB2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */; };
 		847118BF1B2CBD2D006FFEB2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */; };
 		847118C11B2CC2D6006FFEB2 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */; };
@@ -37,6 +38,7 @@
 		14FFC090A4C92ABA629A0B15 /* Pods-unbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unbox.release.xcconfig"; path = "Pods/Target Support Files/Pods-unbox/Pods-unbox.release.xcconfig"; sourceTree = "<group>"; };
 		33EC959C5D870E55D9A3DC66 /* Pods-unbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unbox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unbox/Pods-unbox.debug.xcconfig"; sourceTree = "<group>"; };
 		7C2C7AB7FFEA90BF21DBA12F /* libPods-unbox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unbox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		841E39EC1B3525E500BC3808 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = ../FeedViewController.swift; sourceTree = "<group>"; };
 		847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
@@ -121,11 +123,12 @@
 				847118BE1B2CBD2D006FFEB2 /* FeedViewController.swift */,
 				84CAB4661B2681EE00ABE15A /* AppDelegate.swift */,
 				84CAB4681B2681EE00ABE15A /* ViewController.swift */,
-				84CAB46A1B2681EE00ABE15A /* Main.storyboard */,
 				8491029E1B2E41DE00EA692E /* PhotoCaptureViewController.swift */,
 				8491029C1B2E117100EA692E /* TutorialViewController.swift */,
 				847118C01B2CC2D6006FFEB2 /* DetailedViewController.swift */,
 				847118BC1B2CBC77006FFEB2 /* PhotoCell.swift */,
+				84CAB46A1B2681EE00ABE15A /* Main.storyboard */,
+				841E39EC1B3525E500BC3808 /* MessageCell.swift */,
 				84CAB46D1B2681EE00ABE15A /* Images.xcassets */,
 				84CAB46F1B2681EE00ABE15A /* LaunchScreen.xib */,
 				84CAB4641B2681EE00ABE15A /* Supporting Files */,
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847118BD1B2CBC77006FFEB2 /* PhotoCell.swift in Sources */,
+				841E39ED1B3525E500BC3808 /* MessageCell.swift in Sources */,
 				8491029D1B2E117100EA692E /* TutorialViewController.swift in Sources */,
 				847118C81B2D0824006FFEB2 /* DetailedViewTransition.swift in Sources */,
 				84CAB4691B2681EE00ABE15A /* ViewController.swift in Sources */,
