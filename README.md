@@ -12,6 +12,10 @@ Tasks:
     * [ ] Detailed view assets
     * [ ] PhotoCapture view assets
 * [ ] Code (Jules)   
+    * [ ] Fade in / move up messages
+    * [ ] Add Channels
+    * [ ] Assign messages to posts
+
     * [ ] TableView: consistent download 
     * [ ] Reload data on drag
     * [ ] Like: max 1 per user
