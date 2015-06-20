@@ -2,21 +2,23 @@
 
 Tasks:
 * [ ] Wireframes (Court)
+    * [ ] Feed view
+    * [ ] Detailed view
+    * [ ] PhotoCapture view
 * [ ] Assets (Christine)
     * [ ] Launch screen
     * [ ] Tutorial screens
-    * [ ] Button images (camera, like, done, back)
-    * [ ] Logo for navigation bar
-* [ ] Feed (Jules)   
+    * [ ] Feed view assets
+    * [ ] Detailed view assets
+    * [ ] PhotoCapture view assets
+* [ ] Code (Jules)   
     * [ ] TableView: consistent download 
-    * [ ] Scroll to last image
     * [ ] Reload data on drag
-* [ ] Detailed View (Jules)
-     * [ ] Like: max 1 per user
-     * [ ] Like animation
-* [ ] Capture Photo (Jules)
-     * [ ] Upload photo from camera roll
-     * [ ] Optional: upload location
+    * [ ] Like: max 1 per user
+    * [ ] Fix like animation
+    * [ ] Allow photo from camera roll
+    * [ ] Optional: upload location
+    * [ ] Optional: hide feed navigation when scrolling up
 
 User Stories:
 * [ ] User uploads a photo
