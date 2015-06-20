@@ -160,6 +160,8 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
             println("message saved")
         }
         self.view.endEditing(true)
+        
+        messageField.text = ""
     }
     
     func onTimer(){
@@ -191,6 +193,7 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
             self.photoView.center.y -= kbSize.height
             self.tableView.center.y -= kbSize.height
             self.sendMessageView.center.y -= kbSize.height
+            self.likeContainerView.center.y -= kbSize.height
             
             }, completion: nil)
     }
@@ -214,6 +217,7 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
             self.photoView.center.y += kbSize.height
             self.tableView.center.y += kbSize.height
             self.sendMessageView.center.y += kbSize.height
+            self.likeContainerView.center.y += kbSize.height
             
             }, completion: nil)
     }
