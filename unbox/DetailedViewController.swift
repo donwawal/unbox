@@ -97,6 +97,11 @@ class DetailedViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func didPressBack(sender: UIButton) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func animatedLike(){
         self.likeButtonCopy.alpha = 1
         

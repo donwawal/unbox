@@ -33,21 +33,32 @@ class DetailedViewTransition: BaseTransition {
         UIView.animateWithDuration(2, animations: { () -> Void in
             transitionImageView.frame.size = self.destinationFrame.size
             transitionImageView.frame.origin = self.destinationFrame.origin
-        }) { (Bool) -> Void in
-            toViewController.view.alpha = 1
-            transitionImageView.removeFromSuperview()
-            self.finish()
+            }) { (Bool) -> Void in
+                toViewController.view.alpha = 1
+                transitionImageView.removeFromSuperview()
+                self.finish()
         }
     }
     
     override func dismissTransition(containerView: UIView, fromViewController: UIViewController, toViewController: UIViewController) {
         
-        //TBD
+        var transitionImageView = UIImageView()
+        transitionImageView.image = detailedViewController.photoView.image
+        transitionImageView.frame = destinationFrame
+        transitionImageView.contentMode = detailedViewController.photoView.contentMode
+        transitionImageView.clipsToBounds = true
+        window?.addSubview(transitionImageView)
         
         UIView.animateWithDuration(2, animations: { () -> Void in
-            //
+            fromViewController.view.alpha = 0
+            
+            transitionImageView.frame.size = self.originFrame.size
+            transitionImageView.frame.origin = self.originFrame.origin
+            
             }) { (Bool) -> Void in
-                //
+
+                transitionImageView.removeFromSuperview()
+                self.finish()
         }
     }
     
