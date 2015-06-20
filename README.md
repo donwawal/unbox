@@ -1,29 +1,26 @@
 # unbox
 
 Tasks:
-* [ ] Wireframes
+* [ ] Wireframes (Court)
 * [ ] Assets (Christine)
-    * [x] App Icon
     * [ ] Launch screen
     * [ ] Tutorial screens
-    * [ ] Button images (like selected and unselected)
+    * [ ] Button images (camera, like, done, back)
     * [ ] Logo for navigation bar
-* [ ] Feed (Jules)
-    * [ ] Transition to detailed view
-    * [ ] Parse: fast image download
+* [ ] Feed (Jules)   
+    * [ ] TableView: consistent download and enable scroll to last image
     * [ ] Reload data on drag
-    * [ ] Optional: Parse location
-* [ ] Detailed View (Court)
-     * [ ] Parse: likes
+* [ ] Detailed View
+     * [ ] Like: max 1 per user
      * [ ] Like animation
-     * [ ] Optional: Parse comments 
+     * [ ] Parse comments 
 * [ ] Capture Photo (Jules)
-     * [ ] Upload resized photo to Parse
+     * [ ] Upload photo from camera roll
      * [ ] Optional: upload location
 
 User Stories:
-* [ ] User takes and uploads a photo
+* [ ] User uploads a photo
 * [ ] User scrolls through Feed
-* [ ] User views detailed view of each photo
-* [ ] User likes or dismisses a photo
-
+* [ ] User views details for each photo
+* [ ] User likes a photo
+* [ ] User comments on a photo
