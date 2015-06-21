@@ -15,11 +15,19 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var selectedCell: PhotoCell!
     var transition: DetailedViewTransition!
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // set the cell color to clear
+        self.tableView.separatorColor = UIColor.clearColor()
+
         
         var timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "onTimer", userInfo: nil, repeats: true)
         timer.fire()
@@ -36,7 +44,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         var photoUrl: String = post["imageFile"]!.url!!
         cell.photoView.image = nil
         cell.photoView.setImageWithURL(NSURL(string: photoUrl))
-        
+        // hide the cell separator
+        cell.separatorInset = UIEdgeInsetsMake(0, 10000, 0, 0)
         return cell
     }
         
@@ -50,7 +59,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
+
         if segue.identifier == "detailedViewSegue"{
             var cell = sender as! PhotoCell
             var indexPath = tableView.indexPathForCell(cell)

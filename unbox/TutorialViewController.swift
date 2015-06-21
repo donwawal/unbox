@@ -17,6 +17,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         tutorialScrollView.contentSize.width = 1280
         tutorialScrollView.delegate = self
+        self.view.backgroundColor = UIColor(red:0.094,  green:0.557,  blue:0.882, alpha:1)
     }
 
     override func didReceiveMemoryWarning() {

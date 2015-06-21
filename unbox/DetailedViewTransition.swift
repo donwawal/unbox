@@ -30,7 +30,7 @@ class DetailedViewTransition: BaseTransition {
         
         toViewController.view.alpha = 0
         
-        UIView.animateWithDuration(2, animations: { () -> Void in
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
             transitionImageView.frame.size = self.destinationFrame.size
             transitionImageView.frame.origin = self.destinationFrame.origin
             }) { (Bool) -> Void in
@@ -49,7 +49,7 @@ class DetailedViewTransition: BaseTransition {
         transitionImageView.clipsToBounds = true
         window?.addSubview(transitionImageView)
         
-        UIView.animateWithDuration(2, animations: { () -> Void in
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
             fromViewController.view.alpha = 0
             
             transitionImageView.frame.size = self.originFrame.size

@@ -35,11 +35,19 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
     var photoUrls:[String] = []
     
     var window = UIApplication.sharedApplication().keyWindow
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        // set the cell color to clear
+        self.tableView.separatorColor = UIColor(red:0.929,  green:0.929,  blue:0.929, alpha:1)
+        
+        
         photoView.setImageWithURL(NSURL(string: photoUrl))
         
         if likes == nil {
