@@ -45,7 +45,7 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
         // Do any additional setup after loading the view.
         
         // set the cell color to clear
-        self.tableView.separatorColor = UIColor.clearColor()
+        self.tableView.separatorColor = UIColor(red:0.929,  green:0.929,  blue:0.929, alpha:1)
         
         
         photoView.setImageWithURL(NSURL(string: photoUrl))
@@ -127,7 +127,7 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
     func animatedLike(){
         self.likeButtonCopy.alpha = 1
         
-        UIView.animateWithDuration(1, animations: { () -> Void in
+        UIView.animateWithDuration(0.3, animations: { () -> Void in
             //likeButton
             self.likeButtonCopy.center = self.destination
             
