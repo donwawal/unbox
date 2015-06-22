@@ -19,7 +19,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="170" id="RDW-rO-FsC" customClass="PhotoCell" customModule="unbox" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="170"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RDW-rO-FsC" id="svk-aP-Ptd">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
@@ -42,7 +42,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="camera_icon" id="VbX-Qk-kZ7">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="icon-camera" id="VbX-Qk-kZ7">
                                 <rect key="frame" x="0.0" y="500" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <animations/>
@@ -291,7 +291,7 @@
         <!--Navigation Controller-->
         <scene sceneID="LPU-8y-1Dx">
             <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="JAO-01-kBX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" hidesBarsOnSwipe="YES" id="JAO-01-kBX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h0w-jY-rO1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -368,10 +368,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="camera_icon" width="120" height="120"/>
         <image name="eye_like" width="60" height="34"/>
         <image name="eye_no_like 2" width="60" height="34"/>
         <image name="gradient fade" width="375" height="41"/>
+        <image name="icon-camera" width="82" height="82"/>
         <image name="nav-arrow" width="71" height="64"/>
         <image name="welcome1" width="320" height="568"/>
         <image name="welcome2" width="320" height="568"/>
