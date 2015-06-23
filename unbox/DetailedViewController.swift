@@ -55,7 +55,7 @@ class DetailedViewController: UIViewController, UITableViewDelegate, UITableView
         }
         
         likeCountLabel.text = String(likes)
-        var imageName = "eye_like"
+        var imageName = "active_heart"
 
         //Copy of like Button for animation
         photoViewCenter = CGPoint(x: 160, y: 207)
