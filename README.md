@@ -1,6 +1,6 @@
 # peek
 
-Peek is an anonymous photo streaming app. With Peek you can create or join a secret streaming channel and share or discuss photos quickly and openly without worrying about judgement or staged content. Follow your curiosities. 
+Peek is an anonymous platform to share streams of photos with friends and strangers alike. Peak allows for the creation of secret streaming channels as well as the ability to join general topics of interest or groups of friends. What makes us unique is the ability to rapidly share photos with the cloak of anonymity allowing for open and honest discussions of content. Without being personally tied to your contributions it frees you to share what you want to share and no longer be bound by what often is a popularity contest in traditional social media. Follow your curiosities with Peek!
 
 User Stories:
 * [x] User uploads a photo
