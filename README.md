@@ -1,32 +1,9 @@
-# unbox
-
-Tasks:
-* [ ] Wireframes (Court)
-    * [ ] Feed view
-    * [ ] Detailed view
-    * [ ] PhotoCapture view
-* [ ] Assets (Christine)
-    * [ ] Launch screen
-    * [ ] Tutorial screens
-    * [ ] Feed view assets
-    * [ ] Detailed view assets
-    * [ ] PhotoCapture view assets
-* [ ] Code (Jules)   
-    * [ ] Fade in / move up messages
-    * [ ] Add Channels
-    * [ ] Assign messages to posts
-
-    * [ ] TableView: consistent download 
-    * [ ] Reload data on drag
-    * [ ] Like: max 1 per user
-    * [ ] Fix like animation
-    * [ ] Allow photo from camera roll
-    * [ ] Optional: upload location
-    * [ ] Optional: hide feed navigation when scrolling up
+# peek
+Peek is an app to encourage casual photosharing and conversations around photos. No need to stage the perfect selfie or professional-looking photo. With Peek you can upload your raw photos anonymously and hear what others have to say about them.
 
 User Stories:
-* [ ] User uploads a photo
-* [ ] User scrolls through Feed
-* [ ] User views details for each photo
-* [ ] User likes a photo
-* [ ] User comments on a photo
+* [x] User uploads a photo
+* [x] User scrolls through Feed
+* [x] User views details for each photo
+* [x] User likes a photo
+* [x] User comments on a photo
