@@ -82,7 +82,7 @@ class PhotoCaptureViewController: UIViewController, UIImagePickerControllerDeleg
         
         post.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             if success {
-                println("post saved")
+                
             } else {
                 println("error \(error)")
             }
