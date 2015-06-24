@@ -7,3 +7,8 @@ User Stories:
 * [x] User views details for each photo
 * [x] User likes a photo
 * [x] User comments on a photo
+
+Walkthrough of user stories:
+
+![Video walkthrough](https://s3.amazonaws.com/jules-codepath/peek.gif)
+
